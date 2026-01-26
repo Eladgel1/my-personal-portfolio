@@ -1,111 +1,3 @@
-/*"use client";
-
-import { useState } from "react";
-import { cn } from "../lib/utils"
-import { FaHtml5, FaReact, FaAngular, FaNode, FaPython } from "react-icons/fa";
-import { FaJava, FaDocker, FaJenkins, FaGitAlt } from "react-icons/fa";
-import { DiCss3 } from "react-icons/di";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { IoLogoJavascript } from "react-icons/io5";
-import { BiLogoTypescript, BiLogoMongodb, BiLogoPostgresql } from "react-icons/bi";
-import { SiExpress, SiPhp, SiGithubactions, SiCircleci, SiRender, SiMocha } from "react-icons/si";
-import { SiGithub, SiPytest, SiJest, SiPostman, SiK6, SiApachejmeter } from "react-icons/si";
-import { TbBrandCSharp } from "react-icons/tb";
-import { AiOutlineApi } from "react-icons/ai";
-import { GoWorkflow } from "react-icons/go";
-import { VscVscode } from "react-icons/vsc";
-
-const skills = [
-
-    // Frontend
-    {name: "HTML", logo: <FaHtml5 />, category: "frontend"},
-    {name: "CSS", logo: <DiCss3 />, category: "frontend"},
-    {name: "Tailwind", logo: <RiTailwindCssFill />, category: "frontend"},
-    {name: "React", logo: <FaReact />, category: "frontend"},
-    {name: "Angular", logo: <FaAngular />, category: "frontend"},
-    {name: "Java Script", logo: <IoLogoJavascript />, category: "frontend"},
-    {name: "Type Script", logo: <BiLogoTypescript />, category: "frontend"},
-
-    // Backend
-    {name: "Node.js", logo: <FaNode />, category: "backend"},
-    {name: "Express.js", logo: <SiExpress />, category: "backend"},
-    {name: "REST APIs", logo: <AiOutlineApi />, category: "backend"},
-    {name: "Python", logo: <FaPython />, category: "backend"},
-    {name: "Java", logo: <FaJava />, category: "backend"},
-    {name: "PHP", logo: <SiPhp />, category: "backend"},
-    {name: "C#", logo: <TbBrandCSharp />, category: "backend"},
-    {name: "MongoDB", logo: <BiLogoMongodb />, category: "backend"},
-    {name: "PostgreSQL", logo: <BiLogoPostgresql />, category: "backend"},
-
-    // DevOps
-    {name: "Docker", logo: <FaDocker />, category: "devops"},
-    {name: "CI/CD Workflows", logo: <GoWorkflow />, category: "devops"},
-    {name: "GitHub Actions", logo: <SiGithubactions />, category: "devops"},
-    {name: "Jenkins", logo: <FaJenkins />, category: "devops"},
-    {name: "CircleCI", logo: <SiCircleci />, category: "devops"},
-    {name: "Render", logo: <SiRender />, category: "devops"},
-
-    // Tools
-    {name: "Git", logo: <FaGitAlt />, category: "tools"},
-    {name: "GitHub", logo: <SiGithub />, category: "tools"},
-    {name: "Pytest", logo: <SiPytest />, category: "tools"},
-    {name: "Jest", logo: <SiJest />, category: "tools"},
-    {name: "Postman", logo: <SiPostman />, category: "tools"},
-    {name: "K6", logo: <SiK6 />, category: "tools"},
-    {name: "JMeter", logo: <SiApachejmeter />, category: "tools"},
-    {name: "VS Code", logo: <VscVscode />, category: "tools"}
-];
-
-const categories = ["all", "frontend", "backend", "devops", "tools"];
-
-export default function SkillsSection() {
-    const [activeCategory, setActiveCategory] = useState("all");
-
-    const filteredSkills = skills.filter((skill) => (
-        activeCategory === "all" || skill.category === activeCategory
-    ));
-
-    return (
-        <section id="skills" className="py-24 px-4 relative bg-secondary/30">
-            <div className="container mx-auto max-w-2xl">
-                <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-                    My <span className="text-primary"> Skills</span>
-                </h2>
-
-                <div className="flex flex-wrap justify-center gap-4 mb-12">
-                    {categories.map((category, key) => (
-                        <button key={key}
-                            onClick={() => setActiveCategory(category)}
-                            className={cn(
-                                "px-5 py-2 rounded-full transition-colors duration-300 capitalize cursor-pointer",
-                                activeCategory === category ? "bg-primary text-primary-foreground" : "bg-secondary/70 text-foreground hover:bg-secondary"
-                            )}>
-                            {category}
-                        </button>
-                    ))}
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-4 justify-items-center">
-                    {filteredSkills.map((skill, key) => (
-                        <div
-                            key={key}
-                            className="bg-card p-4 rounded-lg shadow-xs card-hover flex flex-col items-center gap-4 w-46"
-                        >
-                            <h3 className="font-semibold text-lg text-center">
-                                {skill.name}
-                            </h3>
-                            <div className="text-6xl">
-                                {skill.logo}
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-    );
-};*/
-
-
 "use client";
 
 import {
@@ -143,13 +35,13 @@ const skillGroups = [
     title: "Frontend",
     icon: FaReact,
     description:
-      "Building modern, responsive UIs with reusable components and strong typing.",
+      "Building modern and responsive UIs with reusable components and strong typing.",
     skills: [
-      { name: "JavaScript", icon: IoLogoJavascript },
-      { name: "TypeScript", icon: BiLogoTypescript },
-      { name: "React", icon: FaReact },
-      { name: "HTML", icon: FaHtml5},
-      { name: "Tailwind", icon: RiTailwindCssFill },
+      { name: "JavaScript", icon: IoLogoJavascript, link: "https://devdocs.io/javascript/" },
+      { name: "TypeScript", icon: BiLogoTypescript, link: "https://www.typescriptlang.org/docs/" },
+      { name: "React", icon: FaReact, link: "https://react.dev/reference/react"  },
+      { name: "HTML", icon: FaHtml5, link: "https://devdocs.io/html/" },
+      { name: "Tailwind", icon: RiTailwindCssFill, link: "https://v2.tailwindcss.com/docs"  },
     ],
   },
   {
@@ -159,12 +51,12 @@ const skillGroups = [
     description:
       "Designing scalable APIs and data layers with focus on reliability and clarity.",
     skills: [
-      { name: "Node.js", icon: FaNode },
-      { name: "Express.js", icon: SiExpress },
-      { name: "Python", icon: SiPython },
-      { name: "Java", icon: FaJava },
-      { name: "MongoDB", icon: BiLogoMongodb },
-      { name: "PostgreSQL", icon: BiLogoPostgresql },
+      { name: "Node.js", icon: FaNode, link: "https://devdocs.io/node/"  },
+      { name: "Express.js", icon: SiExpress, link: "https://devdocs.io/express/"  },
+      { name: "Python", icon: SiPython, link: "https://www.python.org/doc/"  },
+      { name: "Java", icon: FaJava, link: "https://docs.oracle.com/en/java/"  },
+      { name: "MongoDB", icon: BiLogoMongodb, link: "https://www.mongodb.com/docs/"  },
+      { name: "PostgreSQL", icon: BiLogoPostgresql, link: "https://www.postgresql.org/docs/"  },
     ],
   },
   {
@@ -174,11 +66,11 @@ const skillGroups = [
     description:
       "Taking projects from laptop to production with containers, Git and automated pipelines.",
     skills: [
-      { name: "Docker", icon: FaDocker },
-      { name: "Git", icon: FaGitAlt },
-      { name: "CI/CD", icon: SiGithubactions },
-      { name: "GitHub Actions", icon: SiGithubactions },
-      { name: "Linux", icon: SiLinux },
+      { name: "Docker", icon: FaDocker, link: "https://docs.docker.com/"  },
+      { name: "Git", icon: FaGitAlt, link: "https://devdocs.io/git/"  },
+      { name: "CI/CD", icon: SiGithubactions, link: "https://docs.gitlab.com/ci/pipelines/"  },
+      { name: "GitHub Actions", icon: SiGithubactions, link: "https://docs.github.com/en/actions"  },
+      { name: "Linux", icon: SiLinux, link: "https://docs.kernel.org/"  },
     ],
   },
   {
@@ -186,13 +78,13 @@ const skillGroups = [
     title: "Testing & Performance",
     icon: SiJest,
     description:
-      "Keeping systems stable with unit tests, integration tests and load testing.",
+      "Keeping systems stable with unit tests, integration tests and end to end testing.",
     skills: [
-      { name: "Jest", icon: SiJest },
-      { name: "Pytest", icon: SiPytest },
-      { name: "Mocha", icon: SiMocha },
-      { name: "K6", icon: SiK6 },
-      { name: "JMeter", icon: SiApachejmeter },
+      { name: "Jest", icon: SiJest, link: "https://jestjs.io/docs/getting-started"  },
+      { name: "Pytest", icon: SiPytest, link: "https://docs.pytest.org/en/stable/"  },
+      { name: "Mocha", icon: SiMocha, link: "https://devdocs.io/mocha/"  },
+      { name: "K6", icon: SiK6, link: "https://grafana.com/docs/k6/latest/"  },
+      { name: "JMeter", icon: SiApachejmeter, link: "https://jmeter.apache.org/"  },
     ],
   },
 ];
@@ -205,8 +97,7 @@ export default function SkillsSection() {
           My <span className="text-primary">Skills</span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          A focused stack around modern web development, DevOps practices and testing,
-          used end-to-end across real projects.
+          A focused stack of my skills around Full-Stack development, DevOps practices and testing.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -236,15 +127,18 @@ export default function SkillsSection() {
                   {group.skills.map((skill) => {
                     const SkillIcon = skill.icon;
                     return (
-                      <span
+                      <a
                         key={skill.name}
+                        href={skill.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-secondary/70 px-3 py-1.5 text-xs md:text-sm font-medium tracking-tight transition-all duration-200 hover:bg-primary/90 hover:text-primary-foreground hover:border-primary/80 hover:scale-105 cursor-pointer"
                       >
                         {SkillIcon && (
-                          <SkillIcon className="h-4 w-4 md:h-4.5 md:w-4.5" />
+                          <SkillIcon className="h-4 w-4 md:h-4.5 md:w-4.5"/>
                         )}
                         {skill.name}
-                      </span>
+                      </a>
                     );
                   })}
                 </div>
@@ -256,5 +150,4 @@ export default function SkillsSection() {
     </section>
   );
 }
-
 
