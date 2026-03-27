@@ -18,7 +18,6 @@ import {
 } from "react-icons/bi";
 import { RiTailwindCssFill } from "react-icons/ri";
 import {
-  SiExpress,
   SiGithubactions,
   SiLinux,
   SiMocha,
@@ -27,6 +26,8 @@ import {
   SiK6,
   SiApachejmeter,
   SiPython,
+  SiVitest,
+  SiFastapi,
 } from "react-icons/si";
 
 const skillGroups = [
@@ -52,8 +53,8 @@ const skillGroups = [
       "Designing scalable APIs and data layers with focus on reliability and clarity.",
     skills: [
       { name: "Node.js", icon: FaNode, link: "https://devdocs.io/node/"  },
-      { name: "Express.js", icon: SiExpress, link: "https://devdocs.io/express/"  },
       { name: "Python", icon: SiPython, link: "https://www.python.org/doc/"  },
+      { name: "FastAPI", icon: SiFastapi, link: "https://devdocs.io/fastapi/" },
       { name: "Java", icon: FaJava, link: "https://docs.oracle.com/en/java/"  },
       { name: "MongoDB", icon: BiLogoMongodb, link: "https://www.mongodb.com/docs/"  },
       { name: "PostgreSQL", icon: BiLogoPostgresql, link: "https://www.postgresql.org/docs/"  },
@@ -82,6 +83,7 @@ const skillGroups = [
     skills: [
       { name: "Jest", icon: SiJest, link: "https://jestjs.io/docs/getting-started"  },
       { name: "Pytest", icon: SiPytest, link: "https://docs.pytest.org/en/stable/"  },
+      { name: "Vitest", icon: SiVitest, link: "https://vitest.dev/" },
       { name: "Mocha", icon: SiMocha, link: "https://devdocs.io/mocha/"  },
       { name: "K6", icon: SiK6, link: "https://grafana.com/docs/k6/latest/"  },
       { name: "JMeter", icon: SiApachejmeter, link: "https://jmeter.apache.org/"  },
@@ -150,4 +152,3 @@ export default function SkillsSection() {
     </section>
   );
 }
-
