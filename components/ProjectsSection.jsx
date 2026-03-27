@@ -20,11 +20,26 @@ const projects = [
   },
   {
     id: 2,
+    title: "Error Translator",
+    subtitle: "AI-Powered Developer Tool for Debugging Code Errors",
+    description: "A full-stack AI tool that turns complex programming errors into clear explanations and actionable fixes.",
+    image: "/projects/project-2.webp",
+    tags: ["FastAPI", "AI", "React", "Docker", "GitHub Actions"],
+    highlights: [
+      "Built a full-stack app with React (TypeScript) and FastAPI, delivering a clean chat-style debugging experience.",
+      "Integrated Gemini AI to generate structed explanations, root causes, and fix suggestions.",
+      "Designed a robust backend with Pydantic validation to ensure consistent and reliable AI responses.",
+    ],
+    demoUrl: "https://error-translator.vercel.app/",
+    githubUrl: "https://github.com/Eladgel1/error-translator",
+  },
+  {
+    id: 3,
     title: "PawPal Network",
     subtitle: "Social network for pet owners",
     description:
       "A social platform that lets pet owners connect, share moments, and build communities around their pets.",
-    image: "/projects/project-2.webp",
+    image: "/projects/project-3.webp",
     tags: ["Angular", "CSS", "MongoDB"],
     highlights: [
       "Implemented core social features like posts, likes, and profile views for pet owners.",
@@ -35,12 +50,12 @@ const projects = [
     githubUrl: "https://github.com/Eladgel1/PawPal-Network",
   },
   {
-    id: 3,
+    id: 4,
     title: "VertiClean",
     subtitle: "VR exposure therapy experience",
     description:
       "An immersive VR application that helps users gradually overcome fear of heights via controlled scenarios.",
-    image: "/projects/project-3.webp",
+    image: "/projects/project-4.webp",
     tags: ["C#", "Unity"],
     highlights: [
       "Developed interactive VR environments that progressively increase difficulty and height exposure.",
@@ -51,12 +66,12 @@ const projects = [
     githubUrl: "https://github.com/Eladgel1/VertiClean",
   },
   {
-    id: 4,
+    id: 5,
     title: "Flight Site",
     subtitle: "Flight search and booking platform",
     description:
       "A web application for searching, comparing and reserving flights with a clean and user-friendly interface.",
-    image: "/projects/project-4.webp",
+    image: "/projects/project-5.webp",
     tags: ["Angular", "Node.js", "Docker"],
     highlights: [
       "Built flight search and filtering UI with Angular and reusable components.",
