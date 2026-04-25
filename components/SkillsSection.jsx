@@ -30,7 +30,6 @@ import {
   SiKubernetes,
 } from "react-icons/si";
 
-
 const skillGroups = [
   {
     category: "Frontend",
@@ -140,10 +139,13 @@ export default function SkillsSection() {
                       >
                         {SkillIcon && (
                           typeof SkillIcon === "string" ? (
-                            <img
-                              src={SkillIcon}
-                              alt=""
-                              className="h-4 w-4 md:h-5 md:w-5"
+                            <span
+                              aria-hidden="true"
+                              className="h-4 w-4 md:h-5 md:w-5 bg-current"
+                              style={{
+                                WebkitMask: `url(${SkillIcon}) center / contain no-repeat`,
+                                mask: `url(${SkillIcon}) center / contain no-repeat`,
+                              }}
                             />
                           ) : (
                             <SkillIcon className="h-4 w-4 md:h-5 md:w-5" />
