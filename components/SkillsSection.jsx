@@ -20,7 +20,6 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import {
   SiGithubactions,
   SiLinux,
-  SiMocha,
   SiJest,
   SiPytest,
   SiK6,
@@ -28,7 +27,9 @@ import {
   SiPython,
   SiVitest,
   SiFastapi,
+  SiKubernetes,
 } from "react-icons/si";
+
 
 const skillGroups = [
   {
@@ -40,9 +41,9 @@ const skillGroups = [
     skills: [
       { name: "JavaScript", icon: IoLogoJavascript, link: "https://devdocs.io/javascript/" },
       { name: "TypeScript", icon: BiLogoTypescript, link: "https://www.typescriptlang.org/docs/" },
-      { name: "React", icon: FaReact, link: "https://react.dev/reference/react"  },
+      { name: "React", icon: FaReact, link: "https://react.dev/reference/react" },
       { name: "HTML", icon: FaHtml5, link: "https://devdocs.io/html/" },
-      { name: "Tailwind", icon: RiTailwindCssFill, link: "https://v2.tailwindcss.com/docs"  },
+      { name: "Tailwind", icon: RiTailwindCssFill, link: "https://v2.tailwindcss.com/docs" },
     ],
   },
   {
@@ -52,12 +53,12 @@ const skillGroups = [
     description:
       "Designing scalable APIs and data layers with focus on reliability and clarity.",
     skills: [
-      { name: "Node.js", icon: FaNode, link: "https://devdocs.io/node/"  },
-      { name: "Python", icon: SiPython, link: "https://www.python.org/doc/"  },
+      { name: "Node.js", icon: FaNode, link: "https://devdocs.io/node/" },
+      { name: "Python", icon: SiPython, link: "https://www.python.org/doc/" },
       { name: "FastAPI", icon: SiFastapi, link: "https://devdocs.io/fastapi/" },
-      { name: "Java", icon: FaJava, link: "https://docs.oracle.com/en/java/"  },
-      { name: "MongoDB", icon: BiLogoMongodb, link: "https://www.mongodb.com/docs/"  },
-      { name: "PostgreSQL", icon: BiLogoPostgresql, link: "https://www.postgresql.org/docs/"  },
+      { name: "Java", icon: FaJava, link: "https://docs.oracle.com/en/java/" },
+      { name: "MongoDB", icon: BiLogoMongodb, link: "https://www.mongodb.com/docs/" },
+      { name: "PostgreSQL", icon: BiLogoPostgresql, link: "https://www.postgresql.org/docs/" },
     ],
   },
   {
@@ -67,11 +68,12 @@ const skillGroups = [
     description:
       "Taking projects from laptop to production with containers, Git and automated pipelines.",
     skills: [
-      { name: "Docker", icon: FaDocker, link: "https://docs.docker.com/"  },
-      { name: "Git", icon: FaGitAlt, link: "https://devdocs.io/git/"  },
-      { name: "CI/CD", icon: SiGithubactions, link: "https://docs.gitlab.com/ci/pipelines/"  },
-      { name: "GitHub Actions", icon: SiGithubactions, link: "https://docs.github.com/en/actions"  },
-      { name: "Linux", icon: SiLinux, link: "https://docs.kernel.org/"  },
+      { name: "Docker", icon: FaDocker, link: "https://docs.docker.com/" },
+      { name: "Kubernetes", icon: SiKubernetes, link: "https://kubernetes.io/docs/home/" },
+      { name: "Git", icon: FaGitAlt, link: "https://devdocs.io/git/" },
+      { name: "CI/CD", icon: SiGithubactions, link: "https://docs.gitlab.com/ci/pipelines/" },
+      { name: "GitHub Actions", icon: SiGithubactions, link: "https://docs.github.com/en/actions" },
+      { name: "Linux", icon: SiLinux, link: "https://docs.kernel.org/" },
     ],
   },
   {
@@ -81,12 +83,12 @@ const skillGroups = [
     description:
       "Keeping systems stable with unit tests, integration tests and end to end testing.",
     skills: [
-      { name: "Jest", icon: SiJest, link: "https://jestjs.io/docs/getting-started"  },
-      { name: "Pytest", icon: SiPytest, link: "https://docs.pytest.org/en/stable/"  },
+      { name: "Jest", icon: SiJest, link: "https://jestjs.io/docs/getting-started" },
+      { name: "Playwright", icon: "/icons/playwright.svg", link: "https://playwright.dev/" },
+      { name: "Pytest", icon: SiPytest, link: "https://docs.pytest.org/en/stable/" },
       { name: "Vitest", icon: SiVitest, link: "https://vitest.dev/" },
-      { name: "Mocha", icon: SiMocha, link: "https://devdocs.io/mocha/"  },
-      { name: "K6", icon: SiK6, link: "https://grafana.com/docs/k6/latest/"  },
-      { name: "JMeter", icon: SiApachejmeter, link: "https://jmeter.apache.org/"  },
+      { name: "K6", icon: SiK6, link: "https://grafana.com/docs/k6/latest/" },
+      { name: "JMeter", icon: SiApachejmeter, link: "https://jmeter.apache.org/" },
     ],
   },
 ];
@@ -137,7 +139,15 @@ export default function SkillsSection() {
                         className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-secondary/70 px-3 py-1.5 text-xs md:text-sm font-medium tracking-tight transition-all duration-200 hover:bg-primary/90 hover:text-primary-foreground hover:border-primary/80 hover:scale-105 cursor-pointer"
                       >
                         {SkillIcon && (
-                          <SkillIcon className="h-4 w-4 md:h-4.5 md:w-4.5"/>
+                          typeof SkillIcon === "string" ? (
+                            <img
+                              src={SkillIcon}
+                              alt=""
+                              className="h-4 w-4 md:h-5 md:w-5"
+                            />
+                          ) : (
+                            <SkillIcon className="h-4 w-4 md:h-5 md:w-5" />
+                          )
                         )}
                         {skill.name}
                       </a>
